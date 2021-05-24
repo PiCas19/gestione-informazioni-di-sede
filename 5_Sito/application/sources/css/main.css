@@ -1,0 +1,12 @@
+
+/**
+ * Descrizione dell'informazione
+ */
+.descrizione {
+	//testo giustificato
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+
+

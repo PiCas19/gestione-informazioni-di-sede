@@ -1,0 +1,58 @@
+/* Stile sui schermi con larghezze massime di 760px (schermi di mobile)*/
+@media screen and (max-width: 760px) {	
+	/* Forza la tabella a non essere più come le tabelle (nasconde la tabella versione desktop) */
+	.responsive-table   thead, .responsive-table  tbody, .responsive-table  th, .responsive-table  td, .responsive-table  tr {
+	  display: block;
+	}
+
+	.responsive-table  tbody td{
+		word-wrap: break-word;
+	}
+	
+	/* Nascondi l'intestazioni della tabella */
+	.responsive-table  thead tr{ 
+	  display: none;
+	}
+	/* Stile di ogni tr*/
+	.responsive-table   tr { 	
+		border: 1px solid #ccc;
+		padding-bottom: 4px;
+	}
+		 
+	/* Crea una riga td*/
+	.responsive-table  td {
+	  border: none;
+	  position: relative;
+	  padding-left: 50%;
+	}
+	
+	/* Permette di rendere la nuova riga td l'intestazione di una tabella */
+	.responsive-table  td:before {
+	  position: absolute;
+	  top: 6px;
+	  left: 6px;
+	  width: 45%;
+	  padding-right: 5%;
+	  white-space: nowrap;
+	}
+	
+	
+	/* Intestazione della tabella della pagina gestione informazioni in modalità mobile*/
+	#visualizza td:nth-of-type(1):before { content: "Titolo informazione"; font-weight: bold }
+	#visualizza td:nth-of-type(2):before { content: "Descrizione"; font-weight: bold }
+	#visualizza td:nth-of-type(3):before { content: "Data inizio"; font-weight: bold }
+	#visualizza td:nth-of-type(4):before { content: "Data fine"; font-weight: bold }
+	#visualizza td:nth-of-type(5):before { content: "Modifica"; font-weight: bold}
+	#visualizza td:nth-of-type(6):before { content: "Elimina"; font-weight: bold}
+	
+	/* Intestazione della tabella della pagina gestione filmati/presentazione in modalità mobile*/
+	#file td:nth-of-type(1):before { content: "Nome del file"; font-weight: bold }
+	#file td:nth-of-type(2):before { content: "Data inizio"; font-weight: bold }
+	#file td:nth-of-type(3):before { content: "Data fine"; font-weight: bold }
+	#file td:nth-of-type(4):before { content: "Modifica"; font-weight: bold}
+	#file td:nth-of-type(5):before { content: "Elimina"; font-weight: bold}
+
+	
+}
+
+
